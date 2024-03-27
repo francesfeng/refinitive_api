@@ -1,6 +1,6 @@
 # Extract news headlines and article
 
-Choose refinitiv news source from['NewsRoom', 'NewsWire', 'WebNews']
+#### Choose refinitiv news source from['NewsRoom', 'NewsWire', 'WebNews']
 
 ```
 headlines = ek.send_json_request("News_Headlines", 
@@ -16,7 +16,17 @@ headlines = ek.send_json_request("News_Headlines",
 
 
 
-Extract news article and meta 
+#### Extract news article and meta 
+
+```
+import refinitiv.data as rd
+import time 
+
+# createa a session
+rd.open_session()
+
+```
+The open_session() function creates and open sessions based on the information contained in the refinitiv-data.config.json configuration file. Please edit this file to set the session type and other parameters required for the session you want to open.
 
 ```
 baseurl = "/data/news/v1/stories/"
